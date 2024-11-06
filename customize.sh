@@ -15,23 +15,23 @@ warning () {
 # 首次安装提示
 TIMESTAMP=`date +%s`
 DIRPATH=/data/adb/mark2_5000
-if [ -d $DIRPATH ]; then
-  DIRTIMESTAMP=`stat -c %Y $DIRPATH`
-  TIMECHA=$(( $DIRTIMESTAMP - $TIMESTAMP + 300 ))
-  if [ $TIMECHA -gt 0 ]; then
-    warning
-    ui_print "**  距上次安装不足300秒                **"
-    ui_print "**  请再仔细考虑${TIMECHA}秒后再次安装         **"
-    abort "***************************************"
-  fi
-else
-  warning
-  ui_print "**  因为本次为首次安装，即将退出         **"
-  ui_print "**  请仔细考虑300秒后再次安装           **"
-  mkdir $DIRPATH
-  abort "***************************************"
-fi
+# if [ -d $DIRPATH ]; then
+#   DIRTIMESTAMP=`stat -c %Y $DIRPATH`
+#   TIMECHA=$(( $DIRTIMESTAMP - $TIMESTAMP + 300 ))
+#   if [ $TIMECHA -gt 0 ]; then
+#     warning
+#     ui_print "**  距上次安装不足300秒                **"
+#     ui_print "**  请再仔细考虑${TIMECHA}秒后再次安装         **"
+#     abort "***************************************"
+#   fi
+# else
+#   warning
+#   ui_print "**  因为本次为首次安装，即将退出         **"
+#   ui_print "**  请仔细考虑300秒后再次安装           **"
+#   abort "***************************************"
+# fi
 
+mkdir $DIRPATH
 # 显示警告信息
 warning
 
