@@ -4,6 +4,7 @@
 &pm8150b_charger {
 	qcom,fv-max-uv = <4480000>;
 	qcom,chg-term-current-ma = <(-246)>;
+	somc,product-max-icl-ua = <3850000>;
 };
 &pm8150b_fg {
 	qcom,fg-empty-voltage = <3000>;
