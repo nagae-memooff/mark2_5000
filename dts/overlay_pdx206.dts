@@ -7,7 +7,7 @@
 	somc,product-max-icl-ua = <3850000>;
 };
 &pm8150b_fg {
-	qcom,fg-empty-voltage = <3000>;
+	qcom,fg-empty-voltage = <2800>;
 };
 &edo_batterydata_al0 {
 	qcom,batt-id-range-pct = <15>;
